@@ -1,20 +1,29 @@
+// on prévient SASS qu'on va utiliser le fichier de variables
+// j'en profite pour « aliasser » le nom du fichier en `v`
+// utilisation des variables : v.$my-var
+@use '../../../styles/variables' as v;
+
+$toto: #fab; // variable locale
+
 .header {
   color: #fff;
-  margin-bottom: 3.2rem; // 3.2 * 10px = 32px (par défaut)
+  // margin-bottom: 3.2rem; // 3.2 * 10px = 32px (par défaut)
+  // on utilise `$gutter` qui est définie dans le fichier `variables`
+  margin-bottom: v.$gutter * 2;
   position: relative;
 
   // & va être remplacée par la valeur TEXTUELLE du sélecteur parent
   &-image {
     // & = .header → &-image = .header-image
-    border-radius: 0 0 1.6rem 1.6rem;
+    border-radius: 0 0 v.$gutter v.$gutter;
   }
 
   &-content {
     // & = .header → &-content = .header-content
-    background: rgba(0, 0, 0, 0.3);
-    bottom: 3.2rem;
+    background: rgba($toto, 0.3);
+    bottom: v.$gutter * 2;
     left: 0;
-    padding: 3.2rem;
+    padding: v.$gutter * 2;
     position: absolute;
     text-align: center;
     width: 100%;

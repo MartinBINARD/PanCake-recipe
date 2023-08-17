@@ -27,3 +27,23 @@ function App() {
   );
 }
 ```
+
+## 3. Composants « statiques »
+
+- on crée les composants un par un…
+- …et on commence par des données codées en dur (statiques)
+
+Ils ne servent qu'à « poser un cadre » pour le moment
+
+## 4. _Props_
+
+Qu'est-ce qui sera transformé en _props_ ?
+
+- une variable utilisé UNIQUEMENT dans le composant
+  sera une « simple » variable locale
+
+- une variable utilisée dans plusieurs composants,
+  je vais la créer dans un ancêtre commun, puis transmise via les _props_.
+- une variable définie dans un parent
+
+**On commence par créer les _props_ en dur !**
