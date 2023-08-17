@@ -7,7 +7,7 @@ import './App.scss';
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header title="Cêpes raffinées" author="John Doe" level="facile" />
       <Ingredients />
       <Steps />
     </div>

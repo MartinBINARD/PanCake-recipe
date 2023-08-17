@@ -1,0 +1,35 @@
+.header {
+  color: #fff;
+  margin-bottom: 3.2rem; // 3.2 * 10px = 32px (par défaut)
+  position: relative;
+
+  // & va être remplacée par la valeur TEXTUELLE du sélecteur parent
+  &-image {
+    // & = .header → &-image = .header-image
+    border-radius: 0 0 1.6rem 1.6rem;
+  }
+
+  &-content {
+    // & = .header → &-content = .header-content
+    background: rgba(0, 0, 0, 0.3);
+    bottom: 3.2rem;
+    left: 0;
+    padding: 3.2rem;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+
+    &__title {
+      // & = .header-content → &__title = .header-content__title
+      font-family: serif;
+      font-size: 4.2rem;
+      font-style: italic;
+      font-weight: 700;
+    }
+
+    &__infos {
+      // & = .header-content → &__infos = .header-content__infos
+      letter-spacing: 0.05em;
+    }
+  }
+}
